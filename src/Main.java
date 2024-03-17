@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Main {
 
     // task 1
@@ -11,18 +13,18 @@ public class Main {
     // task 2
 
     public static void checkIosAndYear(int os, int clientYear) {
-        int yearOfApp = 2024;
+        int currentYear = LocalDate.now().getYear();
 
         if (os == 0){
 
-            if (clientYear <= yearOfApp) {
+            if (clientYear <= currentYear) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             } else {
                 System.out.println("обычное предложение об установке приложения для iOS по ссылке");
             }
         } else if (os == 1){
 
-            if (clientYear <= yearOfApp){
+            if (clientYear <= currentYear){
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
             } else {
                 System.out.println("обычное предложение об установке приложения для Android по ссылке");
