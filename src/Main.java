@@ -1,28 +1,28 @@
 public class Main {
 
     // task 1
-    public static void checkYearAndPrint(int a) {
-        if (a > 1584 && a % 4 == 0 && a % 100 != 0 || a % 400 == 0) {
-            System.out.println(a + " год является високосным");
+    public static void checkYearAndPrint(int year) {
+        if (year > 1584 && year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            System.out.println(year + " год является високосным");
         } else {
-            System.out.println(a + " год не является високосным");
+            System.out.println(year + " год не является високосным");
         }
     }
     // task 2
 
-    public static void checkIosAndYear(int a, int b) {
-        int clientDeviceYear = 2015;
+    public static void checkIosAndYear(int os, int clientYear) {
+        int yearOfApp = 2024;
 
-        if (a == 0){
+        if (os == 0){
 
-            if (b < clientDeviceYear) {
+            if (clientYear < yearOfApp) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             } else {
                 System.out.println("обычное предложение об установке приложения для iOS по ссылке");
             }
-        } else if (a == 1){
+        } else if (os == 1){
 
-            if (b < clientDeviceYear){
+            if (clientYear < yearOfApp){
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
             } else {
                 System.out.println("обычное предложение об установке приложения для Android по ссылке");
@@ -33,14 +33,14 @@ public class Main {
     }
     // task 3
 
-    public static void checkDistance(int a) {
+    public static void checkDistance(int distance) {
         int deliveryTime = 1;
-        if (a <= 20) {
+        if (distance <= 20) {
             System.out.println("Потребуется дней: " + deliveryTime);
-        } else if (a > 20 && a <= 60) {
+        } else if (distance > 20 && distance <= 60) {
             deliveryTime += 1;
             System.out.println("Потребуется дней: " + deliveryTime);
-        } else if (a > 60 && a <= 100) {
+        } else if (distance > 60 && distance <= 100) {
             deliveryTime += 2;
             System.out.println("Потребуется дней: " + deliveryTime);
         } else  { // для deliveryDistance > 100
@@ -56,7 +56,7 @@ public class Main {
         checkYearAndPrint(year);
 
         // Task 2
-        int os = 0;
+        int os = 1;
         int yearIssue = 2024;
         checkIosAndYear(os, yearIssue);
 
