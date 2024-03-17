@@ -15,14 +15,14 @@ public class Main {
 
         if (os == 0){
 
-            if (clientYear < yearOfApp) {
+            if (clientYear <= yearOfApp) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             } else {
                 System.out.println("обычное предложение об установке приложения для iOS по ссылке");
             }
         } else if (os == 1){
 
-            if (clientYear < yearOfApp){
+            if (clientYear <= yearOfApp){
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
             } else {
                 System.out.println("обычное предложение об установке приложения для Android по ссылке");
